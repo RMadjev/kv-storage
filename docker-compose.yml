@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    container_name: Mongo-db
+    image: mongo:latest
+    restart: always
+    logging:
+      driver: none
+    ports:
+      - 27020:27017
+  web:
+    build: .
+    container_name: flaskapp
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    depends_on:
+      - db

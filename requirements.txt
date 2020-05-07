@@ -1,0 +1,6 @@
+Flask==1.1.2
+flake8==3.7.9
+flask-mongoengine==0.9.5
+flask-swagger==0.2.14
+flask-swagger-ui==3.25.0
+coverage==5.0.4
